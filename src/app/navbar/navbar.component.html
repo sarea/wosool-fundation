@@ -1,7 +1,9 @@
 <div>
-  <mat-toolbar><a [routerLink]="['/home']">Home</a></mat-toolbar>
-  <mat-toolbar><a [routerLink]="['/partners']">Partners</a></mat-toolbar>
-  <mat-toolbar><a [routerLink]="['/projects']">Projects</a></mat-toolbar>
-  <mat-toolbar><a [routerLink]="['/about']">About</a></mat-toolbar>
-  <mat-toolbar><a [routerLink]="['/contact']">Contact</a></mat-toolbar>
+  <ul class="nav-bar">
+    <li class="slid-nav"><button mat-button><mat-icon>menu</mat-icon></button></li>
+    <li><button mat-button class="home" [routerLink]="['/home']"></button></li>
+    <li class="nav-item"><button mat-button [routerLink]="['/projects']">Projects</button></li>
+    <li class="nav-item"><button mat-button [routerLink]="['/partners']">Partners</button></li>
+    <li class="nav-item"><button mat-button [routerLink]="['/about']">About</button></li>
+  </ul>
 </div>

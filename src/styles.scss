@@ -1,6 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-html, body {
+@import "~basscss/css/basscss.min.css";
+
+
+html {
     padding: 0;
     margin: 0;
+    margin-top: 55px;
+    height: 100%;
+    box-sizing: border-box;
+} 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+}
+
+.loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.spinner {
+    background-image: url('../src/assets/loading.svg');   
+    background-repeat: no-repeat;
+    // display: block;
+    height: 300px;
+    width: 300px; 
 }

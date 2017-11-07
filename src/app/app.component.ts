@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -9,4 +9,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
   preserveWhitespaces: false,
 })
 export class AppComponent {
+  counterValue = 5;
 }

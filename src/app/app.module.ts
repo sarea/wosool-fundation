@@ -13,6 +13,7 @@ import {
   MatProgressSpinnerModule,
   MatCardModule,
   MatIconModule,
+  MatTabsModule,
 } from '@angular/material';
 
 // Components
@@ -44,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
     MatProgressSpinnerModule,
     MatCardModule,
     MatIconModule,
+    MatTabsModule,
     RouterModule.forRoot([
       { path: 'about', component: AboutComponent },
       { path: 'projects', component: ProjectsComponent },

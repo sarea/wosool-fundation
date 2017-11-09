@@ -1,17 +1,22 @@
-.example-container {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .example-sidenav-content {
-    // display: flex;
-    // height: 100%;
-    // align-items: center;
-    // justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 20px;
-    width: 400px;
-  }
-  
+.sidenav-container {
+    .sidenav-content {
+        height: 100%;
+        position: relative;
+        padding-top: 55px;
+        min-height: 100vh;
+    } 
+    .sidenav-body {
+        position: fixed;
+        padding: 20px;
+        // width: 100%;
+        height: 100vh;
+    }
+}
+
+// mat-sidenav, mat-backdrop {
+//     position: fixed !important;
+//     }
+// mat-backdrop ~ mat-content {
+// position: fixed;
+// overflow: hidden;
+// }

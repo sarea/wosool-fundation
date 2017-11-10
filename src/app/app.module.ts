@@ -14,8 +14,10 @@ import {
   MatCardModule,
   MatIconModule,
   MatTabsModule,
+  MatMenuModule,
 } from '@angular/material';
 
+import {AppRoutingModule} from './app.routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -46,14 +48,8 @@ import { FooterComponent } from './footer/footer.component';
     MatCardModule,
     MatIconModule,
     MatTabsModule,
-    RouterModule.forRoot([
-      { path: 'about', component: AboutComponent },
-      { path: 'projects', component: ProjectsComponent },
-      { path: 'partners', component: PartnersComponent },
-      { path: 'home', component: HomeComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full'},
-      { path: '**', redirectTo: 'home', pathMatch: 'full'}
-  ]),
+    MatMenuModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

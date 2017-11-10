@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <ul class="nav-bar">
     <li class="slid-nav"><button mat-button (click)="navOpen()"><mat-icon>menu</mat-icon></button></li>
     <li><button mat-button class="home" [routerLink]="['/home']"></button></li>
@@ -6,4 +6,66 @@
     <li class="nav-item"><button mat-button [routerLink]="['/partners']">Partners</button></li>
     <li class="nav-item"><button mat-button [routerLink]="['/about']">About</button></li>
   </ul>
-</div>
+</div> -->
+<nav  class="nav-bar"  mat-tab-nav-bar>
+  <span class="slid-nav"><button mat-button (click)="navOpen()"><mat-icon>menu</mat-icon></button></span>
+  <a 
+    class="home" 
+    mat-button
+    [routerLink]="['/home']"
+  ></a>
+  <a
+    class="nav-item"
+    mat-tab-link
+    [routerLink]="['/projects']"
+    routerLinkActive="mat-tab-link-active"
+    #rla="routerLinkActive"
+    [active]="activeLinkIndex === 1"
+    (click)="activeLinkIndex = 1"
+    [routerLinkActiveOptions]="{exact: true}"
+    [matMenuTriggerFor]="menu"
+  >
+    projects
+    <mat-menu [overlapTrigger]="false" #menu="matMenu">
+      <button mat-menu-item>project 1</button>
+      <button mat-menu-item>project 2</button>
+    </mat-menu>
+  </a>
+  <a
+    class="nav-item"
+    mat-tab-link
+    [routerLink]="['/partners']"
+    routerLinkActive="mat-tab-link-active"
+    #rla="routerLinkActive"
+    [active]="activeLinkIndex === 2"
+    (click)="activeLinkIndex = 2"
+    [routerLinkActiveOptions]="{exact: true}"
+  >
+    partners
+  </a>
+  <a
+  class="nav-item"
+  mat-tab-link
+  [routerLink]="['/about']"
+  routerLinkActive="mat-tab-link-active"
+  #rla="routerLinkActive"
+  [active]="activeLinkIndex === 3"
+  (click)="activeLinkIndex = 3"
+  [routerLinkActiveOptions]="{exact: true}"
+  >
+    about
+  </a>
+  <!-- <a
+    class="nav-item"
+    mat-tab-link
+    *ngFor="let routeLink of routeLinks; let i = index;"
+    [routerLink]="routeLink.link"
+    routerLinkActive="mat-tab-link-active"
+    #rla="routerLinkActive"
+    [active]="activeLinkIndex === i"
+    (click)="activeLinkIndex = i"
+    [routerLinkActiveOptions]="{exact: true}"
+  >
+    {{routeLink.label}}
+  </a> -->
+</nav>

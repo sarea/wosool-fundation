@@ -5,20 +5,20 @@
     padding: 0;
     width: 100%;
     height: 50px;
-    background-color: #2F4858;
+    background-color: #86BBD8;
     position: fixed;
     left: 0;
     top: 0;
     overflow: auto;
     .slid-nav {
         .mat-button {
-            padding: 5px;
+            padding: 5px 10px;
             line-height: 30px;
             min-width: 30px;
         }
         .mat-icon {
             font-size: 40px;
-            height: 40px;
+            height: 38px;
             width: 40px;
         }
         display: none;
@@ -29,37 +29,54 @@
         background-repeat: no-repeat;
         background-color: #F6AE2D;
         display: block;
-        height: 50px;
+        height: 48px;
         width: 200px;
         float: left;
         cursor: pointer;
         transition: all 1s;
+        opacity: 1;
         &:hover:not(.home) {
             background-color: #33658A;
             color: #86BBD8;
         } 
     }
-
     .nav-item {
-        .mat-button {
+        .mat-tab-link {
             padding: 10px;
             line-height: 30px;
             min-width: 88px;
         }
-        display: block;
-        color: #86BBD8 !important;
-        float: left;
-        height: 100%;
+        .kak {
+            top: 50px !important;
+        }
+        // display: block;
+        // color: #86BBD8 !important;
+        // float: left;
+        // height: 100%;
         transition: all 1s;
-        cursor: pointer;
-        &:hover:not(.home) {
-            background-color: #33658A;
-            color: #86BBD8;
+        // cursor: pointer;
+        &:hover {
+            // background-color: #33658A;
+            // color: #86BBD8;
         }       
     }
 }
 .link-btn:hover /deep/ .mat-button-focus-overlay {
     background-color: transparent;
+}
+
+@media screen and (max-width: 750px) {
+    .nav-bar {
+        height: 50px;
+        .nav-item {
+            min-width: 50px !important;
+            .mat-tab-link {
+                padding: 10px;
+                line-height: 30px;
+                min-width: 50px !important;
+            }    
+        }
+    }
 }
 @media screen and (max-width: 500px) {
     .nav-bar {
@@ -72,26 +89,7 @@
         }
         .home {
             float: none;  
-            margin: auto;          
-            height: 50px;
-            width: 200px;
+            margin: auto;
         }
     }
 }
-
-.example-container {
-    width: 500px;
-    height: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 20px;
-  }

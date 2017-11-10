@@ -8,6 +8,4 @@ import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   preserveWhitespaces: false,
 })
-export class AppComponent {
-  counterValue = 5;
-}
+export class AppComponent {}

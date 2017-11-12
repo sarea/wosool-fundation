@@ -10,11 +10,11 @@ import {
   MatCheckboxModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatProgressSpinnerModule,
   MatCardModule,
   MatIconModule,
   MatTabsModule,
   MatMenuModule,
+  MatExpansionModule,
 } from '@angular/material';
 
 import {AppRoutingModule} from './app.routing.module';
@@ -26,6 +26,7 @@ import { HomeComponent } from './home/home.component';
 import { PartnersComponent } from './partners/partners.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     PartnersComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -44,11 +46,11 @@ import { FooterComponent } from './footer/footer.component';
     MatCheckboxModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatProgressSpinnerModule,
     MatCardModule,
     MatIconModule,
     MatTabsModule,
     MatMenuModule,
+    MatExpansionModule,
     AppRoutingModule,
   ],
   providers: [],

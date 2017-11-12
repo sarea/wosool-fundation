@@ -1,31 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav class="sidenav-body">
-    <button fxLayout="column" mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
-      <mat-icon>add</mat-icon>
-    </button>
-    <div>
-    <mat-toolbar>
-        <span>Custom Toolbar</span>
-      
-        <mat-toolbar-row>
-          <span>Second Line</span>
-          <span class="example-spacer"></span>
-          <mat-icon class="example-icon">verified_user</mat-icon>
-        </mat-toolbar-row>
-      
-        <mat-toolbar-row>
-          <span>Third Line</span>
-          <span class="example-spacer"></span>
-          <mat-icon class="example-icon">favorite</mat-icon>
-          <mat-icon class="example-icon">delete</mat-icon>
-        </mat-toolbar-row>
-      </mat-toolbar>
-      <ul class="nav-bar">
-        <li class="nav-item"><button mat-button (click)="sidenav.toggle()" [routerLink]="['/projects']">Projects</button></li>
-        <li class="nav-item"><button mat-button (click)="sidenav.toggle()" [routerLink]="['/partners']">Partners</button></li>
-        <li class="nav-item"><button mat-button (click)="sidenav.toggle()" [routerLink]="['/about']">About</button></li>
-      </ul>
-    </div>
+  <mat-sidenav opened="true" #sidenav class="sidenav-body">
+    <app-sidenav (navToggle)="sidenav.toggle()"></app-sidenav>
   </mat-sidenav>
   <div class="sidenav-content">
       <app-navbar (navToggle)="sidenav.toggle()"></app-navbar>

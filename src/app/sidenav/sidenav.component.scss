@@ -1,0 +1,78 @@
+.sidenav {
+    padding: 5px;
+    .toolbar {
+        padding: 5px;
+        .toolbar-logo {
+            margin-bottom: auto;
+        }
+        .spacer {
+            flex: 1 1 auto;
+        }
+        .close-button {
+            margin-bottom: auto;
+        }
+        .toolbar-row {
+            padding: 10px;
+            // align-items: baseline;
+            flex-wrap: wrap;
+            &:focus, &:active {
+                outline: none; 
+                // background-color: #C8E0ED;
+            }
+            .toolbar-text {
+            }
+            .toolbar-icon {
+            }
+            .project-list {
+                flex-wrap: wrap;
+                flex-basis: 100%;
+                .project-list-item {
+                    height: 50px;
+                    padding: 10px;
+                    background-color: #9CC7DF;
+                }
+            }
+        }
+        .item-selected {
+            border-left: 2px solid #2F4858;
+            background-color: #C8E0ED;  
+            transition: all 1s;          
+        }
+        .project-menu {
+            height: 150px;
+        }
+    }
+}
+
+.fadeIn {
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+@keyframes fadeIn {
+    60% {
+        visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+}
+.fadeOut {
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+    }
+    25% {
+        visibility: visible;
+    }
+    75% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+    }
+}

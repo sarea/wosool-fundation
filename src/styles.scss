@@ -1,20 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+@import url('https://fonts.googleapis.com/css?family=Federo');
+
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~basscss/css/basscss.min.css";
+@import "./custom-theme.scss";
 
 
-html {
+html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 14px !important;
+    // font-family: 'Raleway', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
 } 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
-}
-body {
-    margin: 0;
 }
 
 .loading {

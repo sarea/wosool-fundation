@@ -1,5 +1,9 @@
 <nav  class="nav-bar"  mat-tab-nav-bar>
-  <span class="slid-nav"><button mat-button (click)="navOpen()"><mat-icon>menu</mat-icon></button></span>
+  <span class="slid-nav">
+    <button mat-button (click)="navOpen()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </span>
   <a 
     class="home" 
     mat-button
@@ -8,7 +12,6 @@
   <a
     class="nav-item"
     mat-tab-link
-    [routerLink]="['/projects']"
     routerLinkActive="mat-tab-link-active"
     #rla="routerLinkActive"
     [active]="activeLinkIndex === 1"
@@ -16,10 +19,10 @@
     [routerLinkActiveOptions]="{exact: true}"
     [matMenuTriggerFor]="menu"
   >
-    projects
+    Projects
     <mat-menu [overlapTrigger]="false" #menu="matMenu">
-      <button mat-menu-item>project 1</button>
-      <button mat-menu-item>project 2</button>
+      <button mat-menu-item [routerLink]="['/projects']">project 1</button>
+      <button mat-menu-item [routerLink]="['/ielts']">project 1</button>
     </mat-menu>
   </a>
   <a
@@ -32,7 +35,7 @@
     (click)="activeLinkIndex = 2"
     [routerLinkActiveOptions]="{exact: true}"
   >
-    partners
+    Partners
   </a>
   <a
   class="nav-item"
@@ -44,7 +47,7 @@
   (click)="activeLinkIndex = 3"
   [routerLinkActiveOptions]="{exact: true}"
   >
-    about
+    About
   </a>
   <!-- <a
     class="nav-item"

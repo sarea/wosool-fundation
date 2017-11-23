@@ -1,7 +1,15 @@
+@import "../../custom-theme.scss";
+
 .sidenav {
-    padding: 5px;
+    padding: 5px;    
+    // background-color: $tertiary-blue-grey;
     .toolbar {
         padding: 5px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background-color: $grey-7;       
         .toolbar-logo {
             margin-bottom: auto;
         }
@@ -10,6 +18,8 @@
         }
         .close-button {
             margin-bottom: auto;
+            color: $primary-blue-grey;
+            margin-bottom: 24px;
         }
         .toolbar-row {
             padding: 10px;
@@ -22,6 +32,7 @@
             .toolbar-text {
             }
             .toolbar-icon {
+                color: $primary-blue-grey;
             }
             .project-list {
                 flex-wrap: wrap;
@@ -29,13 +40,14 @@
                 .project-list-item {
                     height: 50px;
                     padding: 10px;
-                    background-color: #9CC7DF;
+                    font-family: 'Raleway', sans-serif;
+                    background-color: $grey-7;
                 }
             }
         }
         .item-selected {
-            border-left: 2px solid #2F4858;
-            background-color: #C8E0ED;  
+            border-left: 2px solid $primary-light-blue;
+            background-color: $grey-6;  
             transition: all 1s;          
         }
         .project-menu {

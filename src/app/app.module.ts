@@ -27,6 +27,8 @@ import { PartnersComponent } from './partners/partners.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { IeltsProjectComponent } from './ielts-project/ielts-project.component';
+import { CarouselSliderComponent } from './carousel-slider/carousel-slider.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     PartnersComponent,
     ProjectsComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    IeltsProjectComponent,
+    CarouselSliderComponent
   ],
   imports: [
     BrowserModule,

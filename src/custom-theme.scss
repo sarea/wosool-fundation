@@ -1,0 +1,143 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// Marerial Variables
+$app-primary: mat-palette($mat-light-blue, 900);        // primary-dark-blue
+$app-accent: mat-palette($mat-blue-grey, 600);          // primary-blue-grey
+$app-warn: mat-palette($mat-amber, 200);                // primary-yellow
+$app-grey: mat-palette($mat-grey, 300);                 // $grey-6
+$app-light-blue: mat-palette($mat-light-blue, 500);     // primary-light-blue
+
+// Injecting that variables in the theme
+$app-theme: mat-light-theme($app-grey, $app-accent, $app-warn);
+
+// injecting the theme in material
+@include angular-material-theme($app-theme);
+
+// material typography
+$custom-typography: mat-typography-config(
+  $font-family: 'Raleway,  sans-serif'
+);
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+
+
+@include mat-core($custom-typography);
+
+
+
+
+$primary-dark-blue: #01579B;
+$secondary-dark-blue: #2F75AD;
+$tertiary-dark-blue: #5D94BF;
+
+// light-blue
+$primary-light-blue: #03A9F4;
+$secondary-light-blue: #5EC8F8;
+$tertiary-light-blue: #8CD7FA;
+
+// yellow
+$primary-yellow: #FFE082;
+$secondary-yellow: #FFEBAF;
+$tertiary-yellow: #FFDF86; 
+$dark-yellow: #A38F53;
+
+// orange
+$primary-blue-grey: #546E7A;
+$secondary-blue-grey: #92A2AA;
+$tertiary-blue-grey: #B1BDC2; 
+$dark-blue-grey: #2E3C43;
+
+// blck - gray
+$black: #000000;
+$grey-1: #171717;
+$grey-2: #454545;
+$grey-3: #5C5C5C;
+$grey-4: #737373;
+$grey-5: #B9B9B9;
+$grey-6: #E0E0E0;
+$grey-7: #F9F8F8;
+$white: #ffffff;
+
+
+
+
+
+
+
+
+
+
+
+// // define a real custom palette (using http://mcg.mbitson.com)
+// $bv-brand: (
+//     50: #ffffff,
+//     100: #dde6f3,
+//     200: #b4c9e4,
+//     300: #7fa3d1,
+//     400: #6992c9,
+//     500: #5282c1,
+//     600: #4072b4,
+//     700: #38649d,
+//     800: #305687,
+//     900: #284770,
+//     A100: #ffffff,
+//     A200: #dde6f3,
+//     A400: #6992c9,
+//     A700: #38649d,
+//     contrast: (
+//         50: $black-87-opacity,
+//         100: $black-87-opacity,
+//         200: $black-87-opacity,
+//         300: $black-87-opacity,
+//         400: $black-87-opacity,
+//         500: white,
+//         A400: $black-87-opacity,
+//         A700: white,
+//     )
+// );
+
+// $bv-orange: (
+//     50: #ffffff,
+//     100: #fff7f4,
+//     200: #fecdbd,
+//     300: #fc9977,
+//     400: #fc8259,
+//     500: #fb6c3b,
+//     600: #fa551d,
+//     700: #f44205,
+//     800: #d63a04,
+//     900: #b83204,
+//     A100: #ffffff,
+//     A200: #fff7f4,
+//     A400: #fc8259,
+//     A700: #f44205,
+//     contrast: (
+//         50: $black-87-opacity,
+//         100: $black-87-opacity,
+//         200: $black-87-opacity,
+//         300: $black-87-opacity,
+//         400: $black-87-opacity,
+//         500: white,
+//         600: white,
+//         700: white,
+//         800: white,
+//         900: white,
+//         A100: $black-87-opacity,
+//         A200: $black-87-opacity,
+//         A400: $black-87-opacity,
+//         A700: white,
+//     )
+// );
+
+// // mandatory stuff for theming
+// $bv-pp-primary: mat-palette($bv-brand);
+// $bv-pp-accent:  mat-palette($bv-orange);
+
+// // include the custom theme components into a theme object
+// $bv-pp-theme: mat-light-theme($bv-pp-primary, $bv-pp-accent);
+
+// // include the custom theme object into the angular material theme
+// @include angular-material-theme($bv-pp-theme);

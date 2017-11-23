@@ -1,9 +1,8 @@
 <div class="sidenav">
-
   <mat-toolbar class="toolbar">
     <span class="toolbar-logo">WOSOOL</span>
     <span class="spacer"></span>
-    <button mat-mini-fab class="close-button" (click)="navClose()">
+    <button mat-icon-button class="close-button" (click)="navClose()">
       <mat-icon>close</mat-icon>
     </button>
     <mat-toolbar-row 
@@ -16,10 +15,10 @@
       <a class="toolbar-text">{{routeLink.label}}</a>
       <span class="spacer"></span>
       <mat-icon *ngIf="selectedIdx !== i" class="toolbar-icon fadeOut">{{routeLink.icon}}</mat-icon>
-      <mat-icon *ngIf="selectedIdx == i" class="toolbar-icon fadeIn">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="selectedIdx === i" class="toolbar-icon fadeIn">keyboard_arrow_up</mat-icon>
       <div class="project-list fadeIn" *ngIf="selectedIdx == i">
-          <div class="project-list-item" [routerLink]="['/about']" (click)="navClose()"><h1>sarea</h1></div>
-          <div class="project-list-item" [routerLink]="['/about']" (click)="navClose()"><h1>sima</h1></div>
+          <div class="project-list-item" [routerLink]="['/projects']" (click)="navClose()">IELTS</div>
+          <div class="project-list-item" [routerLink]="['/ielts']" (click)="navClose()">Scolorship</div>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>

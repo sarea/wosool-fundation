@@ -1,13 +1,17 @@
+@import "../custom-theme.scss";
+
 .sidenav-container {
     .sidenav-content {
         height: 100%;
         position: relative;
-        padding-top: 55px;
+        padding-top: 50px;
         min-height: 100vh;
+        background-color: $grey-7;
     } 
     .sidenav-body {
         position: fixed;
         width: 100%;
         height: 100vh;
+        background-color: $grey-7;
     }
 }

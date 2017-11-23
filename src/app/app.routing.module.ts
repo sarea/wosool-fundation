@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { PartnersComponent } from './partners/partners.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { IeltsProjectComponent } from './ielts-project/ielts-project.component';
 
 const routes: Routes = [
     {
@@ -14,6 +15,7 @@ const routes: Routes = [
     },
 
     { path: 'projects', component: ProjectsComponent },
+    { path: 'ielts', component: IeltsProjectComponent },
     { path: 'partners', component: PartnersComponent },
     { path: 'about', component: AboutComponent },
     { path: 'home', component: HomeComponent },
